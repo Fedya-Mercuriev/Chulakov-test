@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" width="device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Test Assignment | Junior Front-end Developer</title>
+  <link rel="stylesheet" href="css/built.css">
+</head>
+<body>
+  <div class="page-wrapper">
+
+
+
+
+    <!--LEFT-SIDE MENU STARTS HERE-->
+    <header class="page-header">
+      <nav class="page-navigation">
+        <div class="site-logo-wrapper" tabindex="1">
+          <a href="#" class="site-logo" title="Главная">
+            <img src="img/site-logo.png" alt="Логотип сайта" width="176" height="36">
+          </a>
+        </div>
+
+        <ul class="site-menu">
+          <li class="site-menu__item" tabindex="2">
+            <a href="" class="menu-link">Первая ссылка</a>
+          </li>
+          <li class="site-menu__item" tabindex="3">
+            <a href="" class="menu-link">Вторая ссылка</a>
+          </li>
+          <li class="site-menu__item" tabindex="4">
+            <a href="" class="menu-link">Третья ссылка</a>
+          </li>
+          <li class="site-menu__item" tabindex="5">
+            <a href="" class="menu-link account-link">Личный кабинет</a>
+          </li>
+          <li class="site-menu__item" tabindex="6">
+            <a href="" class="menu-link logout-link">Выйти</a>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!--MOBILE MENU STARTS HERE-->
+      <div class="mobile-menu">
+        <div class="mobile-menu__content-wrapper">
+          <div class="mobile-menu__site-logo-wrapper">
+            <a href="" class="mobile-menu__site-logo">
+              <img src="img/site-logo.png" alt="Логотип сайта" width="176" height="36"></a>
+            </div>
+          <div class="mobile-menu__hamburger-button">
+            <i class="mobile-menu__hamburger-bar"></i>
+            <i class="mobile-menu__hamburger-bar"></i>
+            <i class="mobile-menu__hamburger-bar"></i>
+          </div>
+        </div>
+        <ul class="mobile-menu__menu-wrapper">
+          <li class="mobile-menu__item" tabindex="2">
+            <a href="" class="mobile-menu__menu-link">Первая ссылка</a>
+          </li>
+          <li class="mobile-menu__item" tabindex="3">
+            <a href="" class="mobile-menu__menu-link">Вторая ссылка</a>
+          </li>
+          <li class="mobile-menu__item" tabindex="4">
+            <a href="" class="mobile-menu__menu-link">Третья ссылка</a>
+          </li>
+          <li class="mobile-menu__item" tabindex="5">
+            <a href="" class="mobile-menu__menu-link account-link">Личный кабинет</a>
+          </li>
+          <li class="mobile-menu__item" tabindex="6">
+            <a href="" class="mobile-menu__menu-link logout-link">Выйти</a>
+          </li>
+        </ul>
+      </div>
+      <!--MOBILE MENU ENDS HERE-->
+    </header>
+    <!--LEFT-SIDE MENU ENDS HERE-->
+
+
+
+
+    <div class="main-content-wrapper">
+      <!--MAIN BLOCK STARTS HERE-->
+      <main class="main">
+        <header class="main__header">
+          <h1 class="page-headline">Заголовок страницы</h1>
+          <p class="page-intro-text">В отличие от пылевого и ионного хвостов, направление поступает в лимногляциальный часовой угол</p>
+        </header>
+
+
+        <!--PAYMENT BLOCK STARTS HERE-->
+        <div class="payment-block">
+          <div class="payment-info-block">
+            <h4 class="payment-info-block__block-title">Информация об оплате:</h4>
+            <p class="info-section">
+              <span class="info-section__section-title">Номер счета:</span>
+              <span class="info-section__section-content">87123658716587</span>
+            </p>
+
+            <p class="info-section">
+              <span class="info-section__section-title">Сумма платежа:</span>
+              <span class="info-section__section-content">100 руб.</span>
+            </p>
+          </div>
+
+
+          <!--BANK CARD BLOCK STARTS HERE-->
+          <div class="bank-card-block">
+            <h3 class="bank-card-block__block-title">Данные банковской карты</h3>
+            <div class="bank-card-wrapper">
+              <form action="#" class="bank-card" method="post">
+                <div class="bank-card__front-side">
+                  <div class="card-number-block">
+                    <label class="card-number-block__label" for="card-number-first">
+                      Номер карты
+                    </label>
+                    <div class="card-number-input-block">
+
+                      <div class="card-number-input-wrapper">
+                        <input class="card-number-block__input" id="card-number-first"
+                        type="type" name="card-number" tabindex="7" placeholder="0000" maxlength="4">
+                      </div>
+                      <div class="card-number-input-wrapper">
+                        <input class="card-number-block__input" id="card-number-second"
+                        type="type" name="card-number" tabindex="8" placeholder="0000" maxlength="4">
+                      </div>
+                      <div class="card-number-input-wrapper">
+                        <input class="card-number-block__input" id="card-number-third"
+                        type="type" name="card-number" tabindex="9" placeholder="0000" maxlength="4">
+                      </div>
+                      <div class="card-number-input-wrapper">
+                        <input class="card-number-block__input" id="card-number-fourth"
+                        type="type" name="card-number" tabindex="10" placeholder="0000" maxlength="4">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="valid-thru-block">
+                    <label class="valid-thru-block__label" for="valid-thru-month">
+                      Срок действия
+                    </label>
+                    <div class="valid-thru-input-block">
+                      <div class="valid-thru-input-wrapper" id="valid-thru-month-wrapper">
+                        <select class="valid-thru-block__month valid-thru-block__input" id="valid-thru-month"
+                        name="valid-thru-month" tabindex="11">
+                        <option value="hide">00</option>
+                          <option value="01">01</option>
+                          <option value="02">02</option>
+                          <option value="03">03</option>
+                          <option value="04">04</option>
+                          <option value="05">05</option>
+                          <option value="06">06</option>
+                          <option value="07">07</option>
+                          <option value="08">08</option>
+                          <option value="09">09</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                        </select>
+                      </div>
+                      <div class="valid-thru-input-wrapper" id="valid-thru-year-wrapper">
+                        <select class="valid-thru-block__year valid-thru-block__input" id="valid-thru-year"
+                        name="valid-thru-year" tabindex="12">
+                          <option value="hide">0000</option>
+                          <option value="2018">2018</option>
+                          <option value="2019">2019</option>
+                          <option value="2020">2020</option>
+                          <option value="2021">2021</option>
+                          <option value="2022">2022</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="cardholder-name-block">
+                    <div class="cardholder-name-input-wrapper">
+                      <input type="text" class="cardholder-name-block__input" id="cardholder-name-input"
+                      tabindex="13" placeholder="Держатель карты">
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="bank-card__back-side">
+                  <div class="magnetic-stripe-decor"></div>
+                  <div class="cvc-code-block">
+                    <label class="cvc-code-block__label" for="cvc-input">Код CVV2/CVC2</label>
+                    <div class="cvc-code-input-wrapper">
+                      <input type="text" class="cvc-code-block__input" tabindex="14" id="cvc-input"
+                      min="000" maxlength="3" placeholder="000">
+                      <a href="" class="cvc-code-block__cvc-help" tabindex="15">Что такое CVC?</a>
+                    </div>
+                  </div>
+                </div>
+                <button class="bank-card__submit-button" id="submit-button" type="submit" value="submit" tabindex="16" name="submit">Оплатить</button>
+              </form>
+            </div>
+          </div>
+          <!--BANK CARD BLOCK ENDS HERE-->
+        </div>
+        <!--PAYMENT BLOCK ENDS HERE-->
+      </main>
+      <!--MAIN BLOCK ENDS HERE-->
+
+      <!--FOOTER STARTS HERE-->
+      <footer class="footer">
+        <p class="footer__extra-info">Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.</p>
+        <p class="footer__extra-info">Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.</p>
+        <p class="footer__extra-info">Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.</p>
+        <p class="footer__extra-info">Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
+      </footer>
+      <!--FOOTER ENDS HERE-->
+    </div>
+  </div>
+  <script src="dist/es5-shim.min.js"></script>
+  <script src="dist/build.min.js"></script>
+</body>
+</html>

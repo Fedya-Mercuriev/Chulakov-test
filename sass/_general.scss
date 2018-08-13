@@ -1,0 +1,22 @@
+//GENERAL STYLES AND SET-UPS START HERE
+
+body {
+  background-color: #101114;
+}
+
+.page-wrapper {
+  width: 960px;
+  margin: 0 auto;
+  font-size: 0;
+  position: relative;
+
+  @include clearfix();
+
+  @media screen and (max-width: map-deep-get($breakpoints, "tablet")) {
+    width: 100%;
+    @include reset-pad-marg();
+    overflow: hidden;
+  }
+}
+
+//GENERAL STYLES AND SET-UPS END HERE

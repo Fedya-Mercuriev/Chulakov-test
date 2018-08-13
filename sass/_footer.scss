@@ -1,0 +1,27 @@
+.footer {
+  width: 584px;
+  padding: 27px 26px 34px 29px;
+  border-bottom: 1px solid $-footer-border-color;
+  background-color: $-footer-bg;
+
+  &__extra-info {
+    @include reset-pad-marg();
+    margin-bottom: 20px;
+    @include typography(12, 18, Arial, $-footer-text-color, normal);
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  @media screen and (max-width: map-deep-get($breakpoints, "tablet")) {
+    & {
+      width: auto;
+    }
+  }
+
+  @media screen and (max-width: map-deep-get($breakpoints, "mobile-l")) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

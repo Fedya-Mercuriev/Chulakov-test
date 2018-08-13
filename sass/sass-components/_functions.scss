@@ -1,0 +1,9 @@
+/* This function alllows to dive deep into maps to extract
+   value/-s from a multi-level map */
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}

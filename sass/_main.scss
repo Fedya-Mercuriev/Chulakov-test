@@ -1,0 +1,84 @@
+// STYLES FOR MAIN BLOCK START HERE
+
+.main-content-wrapper {
+  float: right;
+
+  @media screen and (max-width: map-deep-get($breakpoints, "tablet")) {
+    width: 100%;
+    float: none;
+  }
+}
+
+.main {
+  width: 639px;
+  padding-bottom: 50px;
+  background-color: $-main-bg;
+  font-size: 14px;
+
+  &__header {
+    padding: 50px 0 33px 29px;
+    background-color: $-main-header-bg;
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-l")) {
+      & {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+      & {
+        padding-left: 16px;
+        padding-right: 8px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: map-deep-get($breakpoints, "tablet")) {
+    & {
+      width: 100%;
+    }
+  }
+}
+
+.page-headline {
+  @include reset-pad-marg();
+  margin-bottom: 17px;
+  @include typography(35, 22, $font-family, $-main-header-color, $font-weight);
+
+  @media screen and (max-width: map-deep-get($breakpoints, "mobile-l")) {
+    & {
+      font-size: 30px;
+      line-height: 0.9;
+    }
+  }
+
+  @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+    & {
+      font-size: 22px;
+      line-height: 1;
+    }
+  }
+}
+
+.page-intro-text {
+  width: 432px;
+  @include reset-pad-marg();
+  @include typography(14, 20, Arial, $-main-header-color, normal);
+  white-space: normal;
+
+  @media screen and (max-width: map-deep-get($breakpoints, "tablet")) {
+    & {
+      max-width: 90%;
+    }
+  }
+
+  @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+    & {
+      text-align: center;
+    }
+  }
+}
+
+// STYLES FOR MAIN BLOCK END HERE

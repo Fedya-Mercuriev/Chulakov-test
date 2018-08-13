@@ -1,0 +1,410 @@
+// STYLES FOR BANK CARD START HERE
+.bank-card-block {
+  padding-top: 36px;
+
+  &__block-title {
+    @include reset-pad-marg();
+    @include typography(21.98, 25.45, $font-family, $-main-bank-card-block-title, $font-weight);
+  }
+}
+
+.bank-card-wrapper {
+  padding-top: 21px;
+
+  @media screen and (max-width: map-deep-get($breakpoints, "tablet")) {
+    & {
+      position: relative;
+    }
+  };
+}
+
+// STYLES FOR BANK CARD FRONT SIDE START HERE
+.bank-card {
+  position: relative;
+
+  @media screen and (max-width: map-deep-get($breakpoints, "mobile-l")) {
+    & {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+    & {
+      text-align: center;
+    }
+  }
+
+  &__front-side {
+    position: relative;
+    float: left;
+    z-index: 1;
+    width: 319px;
+    padding: 24px 17px 13px 14px;
+    @include draw-border(1, solid, $-main-bank-card-border, 10);
+    background-color: $-main-bank-card-body-bg;
+    text-align: left;
+
+    @media screen and (max-width: map-deep-get($breakpoints, "tablet")) {
+      & {
+        float: none;
+        margin-bottom: 35px;
+      }
+    }
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-l")) {
+      & {
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+      & {
+        width: auto;
+      }
+    }
+  }
+}
+
+//STYLES FOR CARD NUMBER BLOCK START HERE
+.card-number-block {
+  margin-bottom: 17px;
+  white-space: nowrap;
+
+  &__label {
+    //display: block;
+    @include typography(16, 21, Arial, $-main-bank-card-label-color, normal);
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 65px;
+    height: 42px;
+    padding: 0px 10px;
+    @include draw-border(1, solid, $-main-bank-card-input-border-color, 0);
+    background-color: $-main-bank-card-input-bg;
+    @include typography(16, 21, Arial, $-main-bank-card-input-color, normal);
+
+    @each $browser in ("::-webkit-input-", "::-moz-", ":-ms-input-", ":-moz-") {
+      &#{$browser}placeholder {
+        @include typography(16, 21, Arial, $-main-bank-card-input-placeholder-color, normal);
+      }
+    }
+    text-align: center;
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+      & {
+        width: 57px;
+        height: 40px;
+        padding: 0;
+      }
+    }
+
+    @include focus-input-style();
+  }
+}
+
+// INPUT WRAPPING BLOCKS' STYLES START HERE
+.card-number-input-block {
+  padding-top: 6px;
+  font-size: 0px;
+}
+
+.card-number-input-wrapper {
+  position: relative;
+  @include input-wrapper-margin($margin: 9);
+}
+// INPUT WRAPPING BLOCKS' STYLES END HERE
+
+//STYLES FOR CARD NUMBER BLOCK END HERE
+
+//STYLES FOR VALID THRU BLOCK START HERE
+.valid-thru-block {
+  margin-bottom: 12px;
+
+  &__label {
+    @include typography(16, 21, Arial, $-main-bank-card-label-color, normal);
+  }
+
+  &__input {
+    box-sizing: border-box;
+    height: 42px;
+    //@include draw-border(1, solid, $-main-bank-card-input-border-color, 0);
+    background-color: $-main-bank-card-input-bg;
+    @include typography(16, 21, Arial, $-main-bank-card-input-color, normal);
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+      & {
+        height: 40px;
+      }
+    }
+
+    @include focus-input-style();
+  }
+}
+
+.valid-thru-input-block {
+  position: relative;
+  padding-top: 6px;
+  font-size: 0px;
+}
+
+.valid-thru-input-wrapper {
+  position: relative;
+  @include input-wrapper-margin($margin: 9);
+}
+
+
+//STYLES FOR VALID THRU BLOCK END HERE
+
+//STYLES FOR CARDHOLDER NAME BLOCK START HERE
+.cardholder-name-block {
+
+  &__input {
+    box-sizing: border-box;
+    width: 319px;
+    height: 42px;
+    padding: 14px 11px 11px 11px;
+    @include draw-border(1, solid, $-main-bank-card-input-border-color, 0);
+    background-color: $-main-bank-card-input-bg;
+    @include typography(16, 21, Arial, $-main-bank-card-input-color, normal);
+
+    @each $browser in ("::-webkit-input-", "::-moz-", ":-ms-input-", ":-moz-") {
+      &#{$browser}placeholder {
+        @include typography(16, 21, Arial, $-main-bank-card-input-placeholder-color, normal);
+      }
+    }
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+      width: 100%;
+    }
+
+    @include focus-input-style();
+  }
+}
+
+//STYLES FOR CARDHOLDER NAME BLOCK END HERE
+
+// STYLES FOR DYNAMICALLY ADDED DROPDOWNS START HERE
+.select-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.select-toggle {
+  position: relative;
+  height: 16px;
+  padding: 10px 36px 14px 14px;
+  border-radius: 0px;
+  border: 1px solid #e4e9ee;
+  @include typography(16,21,Arial,#000000,normal);
+  background-color: #ffffff;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    display: inline-block;
+    width: 16px;
+    height: 8px;
+    background-image: url("../img/select-arrow-down.png");
+    background-repeat: no-repeat;
+  }
+
+  @include focus-input-style();
+
+  &:focus {
+    & ~ ul {
+      border: 1px solid $-main-input-focus-border-color;
+      border-top: 0px;
+    }
+  }
+}
+
+.select-month-wrapper {
+  list-style-type: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 68px;
+  @include reset-pad-marg();
+  @include draw-border(1, solid, $-main-bank-card-input-border-color, 0);
+  border-top: 0px;
+
+  &__list-item {
+    padding: 7px 0;
+    @include typography(16,21,Arial,#000000,normal);
+    text-align: center;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e3e5e7;
+    }
+  }
+}
+
+.select-year-wrapper {
+  //display: none;
+  list-style-type: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 85px;
+  @include reset-pad-marg();
+  @include draw-border(1, solid, $-main-bank-card-input-border-color, 0);
+  border-top: 0px;
+
+  &__list-item {
+    padding: 7px 0;
+    @include typography(16,21,Arial,#000000,normal);
+    text-align: center;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e3e5e7;
+    }
+  }
+}
+
+.valid-thru--active {
+  display: block;
+}
+
+.valid-thru-input-wrapper ul:not(.valid-thru--active) {
+  display: none;
+}
+
+// STYLES FOR DYNAMICALLY ADDED DROPDOWNS END HERE
+
+// STYLES FOR BANK CARD FRONT SIDE END HERE
+
+// STYLES FOR BANK CARD BANK SIDE START HERE
+.bank-card {
+
+  &__back-side {
+    position: relative;
+    float: left;
+    margin-top: 20px;
+    margin-left: -194px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    width: 370px;
+    height: 236px;
+    padding: 25px 0px 13px 0px;
+    @include draw-border(1, solid, $-main-bank-card-border, 10);
+    background-color: $-main-bank-card-body-bg;
+    text-align: right;
+
+    @media screen and (max-width: map-deep-get($breakpoints, "tablet")) {
+      & {
+        position: absolute;
+        top: 25px;
+        left: 30%;
+        margin: 0;
+      }
+    }
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-l")) {
+      & {
+        width: 350px;
+        position: static;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+      & {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }
+
+  @include clearfix();
+}
+
+.magnetic-stripe-decor {
+  width: 100%;
+  height: 42px;
+  margin-bottom: 19px;
+  background-color: $-main-magnetic-stripe-bg;
+
+  @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+    & {
+      height: 40px;
+    }
+  }
+}
+
+.cvc-code-input-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 5px;
+  margin-right: 0;
+}
+
+.cvc-code-block {
+  display: inline-block;
+  width: 138px;
+  padding-right: 14px;
+  text-align: left;
+
+  &__label {
+    @include typography(16, 21, Arial, $-main-bank-card-label-color, normal);
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 136px;
+    height: 42px;
+    padding: 14px 8px 13px 19px;
+
+    @include draw-border(1, solid, $-main-bank-card-input-border-color, 0);
+    background-color: $-main-bank-card-input-bg;
+    @include typography(16, 21, Arial, $-main-bank-card-input-color, normal);
+
+    @each $browser in ("::-webkit-input-", "::-moz-", ":-ms-input-", ":-moz-") {
+      &#{$browser}placeholder {
+        @include typography(16, 21, Arial, $-main-bank-card-input-placeholder-color, normal);
+      }
+    }
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+      & {
+        width: 80px;
+        padding: 0;
+        text-align: center;
+      }
+    }
+
+    @include focus-input-style();
+  }
+
+  &__cvc-help {
+    position: absolute;
+    bottom: 7px;
+    right: 8px;
+    width: 26px;
+    height: 26px;
+    @include insert-from-other-directory(img, help-icon, png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    cursor: pointer;
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+      & {
+        right: -40px;
+      }
+    }
+  }
+}
+
+// STYLES FOR BANK CARD BANK SIDE END HERE
+
+// STYLES FOR BANK CARD END HERE

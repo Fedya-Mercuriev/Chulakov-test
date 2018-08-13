@@ -1,0 +1,22 @@
+{
+  "name": "chulakov-test",
+  "version": "1.0.0",
+  "description": "A test assignment for Oleg Chulakov studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Glenn",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.4.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-wrap": "^0.3.1"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  }
+}

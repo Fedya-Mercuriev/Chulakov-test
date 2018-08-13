@@ -1,0 +1,59 @@
+//STYLES FOR PAYMENT BLOCK START HERE 
+
+.payment-block {
+  padding: 30px 26px 0;
+  border-top: 1px solid #e8e9e9;
+
+  @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+    & {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+}
+
+.payment-info-block {
+  &__block-title {
+    @include reset-pad-marg();
+    margin-top: 19px;
+    @include typography(16, 21, Arial, $-main-payment-info-block-title, normal);
+  }
+}
+
+.info-section {
+  width: 293px;
+  @include reset-pad-marg();
+
+  &__section-title {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 133px;
+    float: left;
+    text-align: left;
+    @include typography(16, 21, Arial, $-main-payment-info-block-title, normal);
+  }
+
+  &__section-content {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 160px;
+    padding-left: 26px;
+    float: right;
+    text-align: left;
+    @include typography(16, 21, Arial, $-main-payment-info-block-content, normal);
+
+    @media screen and (max-width: map-deep-get($breakpoints, "mobile-s")) {
+      padding-left: 5%;
+    }
+  }
+
+  @include clearfix();
+}
+
+.info-section:nth-of-type(1) {
+  margin-top: 24px;
+}
+
+.info-section:nth-last-child(1) {
+  margin-top: 12px;
+}

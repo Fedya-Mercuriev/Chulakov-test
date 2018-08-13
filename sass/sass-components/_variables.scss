@@ -1,0 +1,65 @@
+/*
+The variables that belong to a specific group of variables
+dedicated to a specific big element of the page (ex: header),
+have a corresponding prefix so they can have the same name
+and not override each other.
+Global variables don't have a prefix
+*/
+
+// GLOBAL VARIABLES START HERE
+
+$font-family: "OpenSans-Bold";
+$font-weight: bold;
+$darkening-amount: 20%;
+$lightening-amount: 20%;
+
+
+// VARIABLES FOR NAVBAR ITEMS START HERE
+// (MISSING UNITS ARE MEANT TO BE PX's)
+
+$-header-navbar-bg: #191c24;
+$-header-menu-item-font-size: 18;
+$-header-menu-item-color: #ffffff;
+$-header-menu-item-font-weight: bold;
+$-header-color: #808592;
+$-header-hover-menu-item-bg: #1f2229;
+$-header-border-color: #2a2d37;
+$-header-active-menu-item-bg: #2a2d37;
+$-header-active-menu-item-color: #808592;
+
+// VARIABLES FOR NAVBAR ITEMS END HERE
+
+// VARIABLES FOR MAIN BLOCK START HERE
+
+$-main-bg: #f7f8f8;
+$-main-header-bg: #00aeef;
+$-main-header-color: #193945;
+$-main-payment-info-block-title: #8494ab;
+$-main-payment-info-block-content: #373c43;
+$-main-bank-card-block-title: #383d43;
+$-main-bank-card-border: #e4e9ee;
+$-main-bank-card-body-bg: #f7f8f8;
+$-main-bank-card-label-color: #8494ab;
+$-main-bank-card-input-bg: #ffffff;
+$-main-bank-card-input-border-color: #e4e9ee;
+$-main-bank-card-input-border-focus: #00aeef;
+$-main-bank-card-input-placeholder-color: #bec6cf;
+$-main-bank-card-input-color: #373c43;
+$-main-input-focus-border-color: #383d43;
+$-main-magnetic-stripe-bg: #e4e9ee;
+$-main-submit-button-bg: #95bf00;
+/* Color values below are spelled without a "#"
+due to the mixin functioning pecularity */
+$-main-submit-button-gradient-start: #a2c500;
+$-main-submit-button-gradient-end: #83b200;
+$-main-submit-button-gradient-start-hover: lighten(#a2c500, $lightening-amount);
+$-main-submit-button-gradient-end-hover: lighten(#83b200, $lightening-amount);
+$-main-submit-button-color: #ffffff;
+$-main-button-shadow-color: rgba(0, 0, 0, 0.02);
+
+//VARIABLES FOR MAIN BLOCK END HERE
+
+//VARIABLES FOR FOOTER START HERE
+$-footer-bg: #373c43;
+$-footer-border-color: #272b30;
+$-footer-text-color: #7f8591;

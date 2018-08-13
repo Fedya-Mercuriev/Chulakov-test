@@ -1,0 +1,26 @@
+.bank-card__submit-button {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 173px;
+  padding: 15px 0;
+  border: 0px;
+  border-radius: 3px;
+  background-color: $-main-submit-button-bg;
+  @include typography(14, 18, $font-family, $-main-submit-button-color, bold);
+  @include gradient($-main-submit-button-gradient-start, 20, $-main-submit-button-gradient-end, 20);
+  @include box-shadow(0, 0, 0, 1, $-main-button-shadow-color);
+  cursor: pointer;
+
+  &:hover {
+  @include gradient($-main-submit-button-gradient-start-hover, 20, $-main-submit-button-gradient-end-hover, 20);
+  }
+
+  @media screen and (max-width: map-deep-get($breakpoints, "mobile-l")) {
+    margin: 0 auto;
+  }
+  &:hover {
+    $-main-submit-button-gradient-start-lit: lighten($-main-submit-button-gradient-start, 1%);
+    $-main-submit-button-gradient-end-lit: lighten($-main-submit-button-gradient-start, 1%);
+    @include gradient($-main-submit-button-gradient-start-lit, 20, $-main-submit-button-gradient-end-lit, 20);
+  }
+}

@@ -1,0 +1,13 @@
+@import "../node_modules/normalize-scss/sass/normalize/_import-now";
+@import "sass-components/_variables";
+@import "sass-components/_mixins";
+@import "sass-components/_functions";
+@import "sass-components/_config";
+@import "_fonts";
+@import "_general";
+@import "_page-header";
+@import "_main";
+@import "_payment-block";
+@import "_bank-card-block";
+@import "_submit-button";
+@import "_footer";

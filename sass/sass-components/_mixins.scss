@@ -1,0 +1,90 @@
+@mixin insert-from-other-directory($type, $file-name, $format) {
+  @if $type == img {
+    background-image: url('../img/#{$file-name}.#{$format}');
+  }
+  @if $type == font {
+    @if $format == 'ttf' {
+      src: url('../fonts/#{$file-name}.ttf') format('truetype');
+    } @else if $format == 'woff' {
+      src: url('../fonts/#{$file-name}.woff') format('woff');
+    } @else if $format == 'woff2' {
+      src: url('../fonts/#{$file-name}.woff2') format('woff2');
+    } @else if $format == 'eot' {
+      src: url('../fonts/#{$file-name}.eot') format('embedded-opentype'); // IE Compatible
+    } @else {
+      src: url('../fonts/#{$file-name}.svg') format('svg');
+    }
+  }
+}
+
+@mixin typography($font-size, $leading, $font-family, $color, $weight) {
+  font-size: $font-size * 1px;
+  line-height: $leading/$font-size;
+  color: #{$color};
+  font-family: $font-family;
+  font-weight: #{$weight};
+}
+
+@mixin reset-pad-marg() {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+// A MIXIN FOR DEFINING A DYNAMIC STATE TO ELEMENT (EX: HOVER)
+@mixin dynamic-element-state($state, $bg-color, $color, $font-size, $font-weight) {
+  &:#{$state} {
+    background-color: $bg-color;
+
+    & a {
+      @include typography($font-size, 24, $font-family, #{$color}, $font-weight);
+    }
+  }
+}
+
+@mixin draw-border($width, $style, $color, $radius) {
+  border: $width*1px $style $color;
+  @if ($radius) {
+    border-radius: $radius * 1px;
+  }
+}
+
+@mixin input-wrapper-margin($margin) {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: $margin * 1px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+@mixin gradient($start-color, $start-opacity, $end-color, $end-opacity) {
+  background: #$start-color;
+  background: -moz-linear-gradient(top, $start-color 0 * 1%, $end-color 100 * 1%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0 * 1%, $start-color), color-stop(100 * 1%, #$end-color));
+  background: -webkit-linear-gradient(top, $start-color 0 * 1%, $end-color 100 * 1%);
+  background: -o-linear-gradient(top, $start-color 0 * 1%, $end-color 100 * 1%);
+  background: -ms-linear-gradient(top, $start-color 0 * 1%, $end-color 100 * 1%);
+  background: linear-gradient(to bottom, $start-color 0 * 1%, $end-color 100 * 1%);
+}
+
+@mixin box-shadow($hor, $vert, $blur, $spread, $color) {
+  -webkit-box-shadow: $hor * 1px $vert * 1px $blur * 1px $spread * 1px $color;
+  -moz-box-shadow: $hor * 1px $vert * 1px $blur * 1px $spread * 1px $color;
+  box-shadow: $hor * 1px $vert * 1px $blur * 1px $spread * 1px $color;
+}
+
+@mixin focus-input-style() {
+  &:focus {
+    border: 1px solid $-main-input-focus-border-color;
+    outline: none;
+  }
+}
